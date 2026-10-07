@@ -11,7 +11,7 @@ jobs:
         - name: Welcome message # Name of the step
           run: | # Commands
               echo "My first Github Actions Job"
-              ls .
+              ls -lart
               cat README.md
         - name: generate ascii art # Another Step name
           run: cowsay "MOOOOH" # Last command
