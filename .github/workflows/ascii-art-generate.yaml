@@ -4,7 +4,7 @@ name: Generate ASCII ARTWORK
 on: push
 
 jobs:
-  ascii-job:
+  generate-ascii-art-hob:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -17,7 +17,7 @@ jobs:
         run: cowsay -f "dragon" "Im a Dragon RAAAW!" > dragon.txt
 
       - name: Test File Exist
-        run: grep -i "dragon" dragon.txt
+        run: find . -type f -name "dragon.txt"
 
       - name: Read File
         run: cat dragon.txt
