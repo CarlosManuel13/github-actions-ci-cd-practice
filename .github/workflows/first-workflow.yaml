@@ -12,6 +12,6 @@ jobs:
           run: | # Commands
               echo "My first Github Actions Job"
               ls .
-              cat ../README.md
+              cat README.md
         - name: generate ascii art # Another Step name
           run: cowsay "MOOOOH" # Last command
