@@ -28,7 +28,7 @@ jobs:
 
         - name: Running Context Variables
           run: |               
-              echo "RUNNER=$runner.os"
-              echo "JOB_ID=job.check_run_id
+              echo "RUNNER=${{ runner.os }}"
+              echo "JOB_ID=${{ job.check_run_id }}"
 
           
