@@ -1,5 +1,5 @@
 #4
-name: Workflow Demo
+name: Upload & Download Example
 
 on: [push]
 
