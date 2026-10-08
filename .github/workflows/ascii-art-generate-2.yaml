@@ -43,7 +43,7 @@ jobs:
     steps:
       # descargo el file
     - name: Download dragon file
-      uses: actions/actions/download-artifact@v8
+      uses: actions/download-artifact@v8
       with:
         name: dragon-text-file
 
