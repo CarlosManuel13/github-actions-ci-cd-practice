@@ -7,3 +7,4 @@
 ### Workflows
 - first-wrokflow.yaml ✅
 - ascii-art-generate.yaml ✅
+- ascii-art-generate-2.yaml ✅
