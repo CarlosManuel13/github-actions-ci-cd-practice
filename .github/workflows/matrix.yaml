@@ -26,9 +26,11 @@ jobs:
         - name: Run Image on ${{ matrix.os }}
           run: docker run ${{ matrix.images }}
 
-        - name: Running Context Variables
+        - name: Show Job Info
           run: |               
-              echo "RUNNER=${{ runner.os }}"
-              echo "JOB_ID=${{ job.check_run_id }}"
-
+              echo "status: ${{ job.status }}"
+              echo "job_id: ${{ job.check_run_id }}"
+              echo "workflow_ref: ${{ job.workflow_ref}}"
+              echo "workflow_repository: ${{ job.workflow_repository }}"
+              echo "workflow_file_path: ${{ job.workflow_file_path}}"
           
