@@ -1,0 +1,12 @@
+name: Show Context
+
+on: 
+    workflow_dispatch:
+    push:
+
+jobs:
+    show:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Display Github Context
+          run: echo $GITHUB_CONTEXT
