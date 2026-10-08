@@ -1,4 +1,4 @@
-name: Matrix Workflow
+name: Matrix Workflow # Probaremos la Estrategia Matrix y al final tambien uso github actions var context
 
 on:
     push:
@@ -6,10 +6,10 @@ on:
 
 jobs:
     deploy:
-        strategy:
-            fail-fast: false
-            max-parallel: 2
-            matrix:
+        strategy: #Strategy funciona para definir entre 3 tipos matrix, fail-fast
+            fail-fast: false # Esto si esta en true lo que hace es que si falla cualquier cosa detiene todo el workflow
+            max-parallel: 2 # Los Jobs simultaneos que pueden correr
+            matrix: 
                 os: [ubuntu-latest, windows-latest]
                 images: [hello-world, alpine]
                 exclude:
@@ -24,7 +24,11 @@ jobs:
           run: docker info
           
         - name: Run Image on ${{ matrix.os }}
-          run: |
-              docker run ${{ matrix.images }}
-              echo ${{ runner.os }}
+          run: docker run ${{ matrix.images }}
+
+        - name: Running Context Variables
+          run: |               
+              echo "RUNNER=$runner.os"
+              echo "JOB_ID=job.check_run_id
+
           
