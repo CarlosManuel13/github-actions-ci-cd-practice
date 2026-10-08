@@ -8,5 +8,10 @@ jobs:
     show:
         runs-on: ubuntu-latest
         steps:
-        - name: Display Github Context
+        - name: Dump Github Context
+          env:
+            GITHUB_CONTEXT: ${{ toJson(github) }}
           run: echo $GITHUB_CONTEXT
+
+        - name: Test Github Property
+          run: echo ${{ github.repository }}
